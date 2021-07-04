@@ -153,7 +153,7 @@ public class CreateDatabaseService {
     	user.setLevel(Level.ADMIN);
     	user.setEmail("admin@admin.com");
     	user.setSalt(PasswordUtils.getSalt(30));
-    	user.setPassword(PasswordUtils.generateSecurePassword("111111", user.getSalt()));
+    	user.setPassword(PasswordUtils.generateSecurePassword("admin", user.getSalt()));
     	userRepository.save(user);		
     	user = new User();
     	user.setName("service1");
